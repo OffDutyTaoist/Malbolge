@@ -1,0 +1,46 @@
+Using BOINC to process an AI using self altering code.
+
+Key Feasibility Factors
+1. Processing Power
+BOINC’s Strengths: Leveraging BOINC’s distributed computing model would allow you to harness significant computational power, which is necessary given the sheer complexity and instability of Malbolge-like languages.
+Massive Scalability: BOINC can scale to hundreds or thousands of nodes, making it theoretically feasible to run millions or billions of iterations needed for testing, debugging, and stabilizing self-altering code.
+2. Algorithmic Design
+Search Space: Malbolge generates unpredictable transformations in its code, creating a vast search space of possible states. Defining a clear goal (e.g., functional stability, useful behavior) is crucial for guiding the search process.
+Evolutionary Algorithms: Using genetic algorithms or other optimization techniques might help. You could "evolve" programs by mutating them randomly and selecting the ones that come closest to stability or a specific goal.
+3. Defining Stability
+Metrics: Stability in this context might mean that:
+The program runs without crashing.
+It performs meaningful computations without devolving into randomness.
+You’d need a robust method to detect these states and decide if a given iteration is worth keeping or discarding.
+4. Error Handling
+Malbolge is notorious for producing code that’s almost impossible to debug or interpret. Running this at scale on BOINC would require highly automated error detection and recovery processes to avoid wasting computational cycles on dead-end iterations.
+
+Challenges
+1. Complexity of Malbolge
+The language itself is designed to be chaotic. This makes even a single iteration of code hard to analyze. Scaling this to millions of iterations would amplify the difficulty.
+Writing an interpreter that can handle vast amounts of random, self-altering code efficiently is a monumental task.
+2. Communication Overhead
+BOINC nodes would need to send results back to a central server for evaluation, and there might be significant overhead in transmitting intermediate states of complex Malbolge programs.
+3. Optimization Bottlenecks
+Blind Search Problem: If the goal isn’t well-defined, you could end up spending astronomical amounts of computational power without making meaningful progress.
+Stochastic Nature: Even with distributed processing, the chaotic and self-altering nature of Malbolge may lead to very slow convergence toward stability.
+Possible Workarounds
+Intermediate Layers
+
+Use Malbolge or a similar language only as a layer within a broader architecture.
+Pair it with a more stable language to act as a "controller" or "interpreter" of the self-altering logic.
+Simulation in Parallel
+
+Instead of brute-forcing stability, simulate possible iterations of Malbolge programs in parallel using probabilistic models, reducing the need for raw computation.
+Modified Esoteric Language
+
+Consider creating a Malbolge-inspired language that retains self-altering properties but is designed to be slightly less chaotic.
+
+Why It’s Fascinating
+If successful:
+
+AI with Emergent Properties: The self-altering nature of Malbolge could result in truly unique emergent behavior, as it would break free of deterministic programming paradigms.
+Biological Parallel: This could mimic biological evolution, where random mutations eventually lead to functional and stable organisms.
+Feasibility Conclusion
+Technically Feasible: Using BOINC to process Malbolge programs en masse is feasible in theory, provided you have robust methods for evaluating stability and meaningful behavior.
+Practically Difficult: The chaotic nature of Malbolge and the computational intensity make it a monumental task, requiring innovative approaches to guide the system toward useful results.
